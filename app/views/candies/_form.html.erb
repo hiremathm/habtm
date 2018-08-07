@@ -18,8 +18,14 @@
 
   <div class="field">
     Kids : 
-    <%= collection_check_boxes(:candy, :kid_ids, @kids, :id, :name) %>        
-                    
+    <%#= form.collection_check_boxes(:candy, :kid_ids, @kids, :id, :name) %>        
+    <%= form.collection_check_boxes :kid_ids, Kid.all, :id, :name do |kid|%>
+        <label>
+          <%= kid.check_box %>
+          <%= kid.text%>
+        </label>
+        <!-- <br/> -->
+    <%end%>             
   </div>
 
   <div class="actions">

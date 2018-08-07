@@ -7,7 +7,7 @@
 
 <p>
 	<strong>Kids of Candy</strong>
-	<%= @candy.kids.map{|c| c.name}.join(', ')%>
+	<%#= @candy.kids.map{|c| c.name}.join(', ')%>
 </p>
 <%= link_to 'Edit', edit_candy_path(@candy) %> |
 <%= link_to 'Back', candies_path %>
